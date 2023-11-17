@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<title>Get Sales Record</title>
-		<link rel="stylesheet" type="text/css" href="321BaseBallStyle.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
 		<meta charset="utf-8">
 	</head>
 	<body>

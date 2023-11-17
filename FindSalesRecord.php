@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<title>Find Sales Record</title>
-		<link rel="stylesheet" type="text/css" href="myCss.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
 		<meta charset="utf-8">
 	</head>
 	<body>
