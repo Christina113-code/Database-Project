@@ -1,0 +1,90 @@
+/* MLB Color Palette */
+:root {
+  --mlb-primary-color: #000080; /* Navy Blue */
+  --mlb-secondary-color: #d50032; /* Cardinal Red */
+  --mlb-accent-color: #ffffff; /* White */
+  --mlb-background-color: #f4f4f4; /* Light Gray */
+}
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--mlb-background-color);
+  color: var(--mlb-primary-color);
+}
+
+/* Header Styles */
+header {
+  background-color: var(--mlb-primary-color);
+  color: var(--mlb-accent-color);
+  padding: 10px;
+  text-align: center;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: var(--mlb-secondary-color);
+  padding: 10px;
+}
+
+nav a {
+  color: var(--mlb-accent-color);
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--mlb-primary-color);
+  color: var(--mlb-accent-color);
+  padding: 10px;
+  text-align: center;
+}
+
+/* Button Styles */
+.button {
+  background-color: var(--mlb-secondary-color);
+  color: var(--mlb-accent-color);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #a30021; /* Darker shade of Cardinal Red */
+}
+/* Dropdown Styles */
+select {
+  padding: 8px;
+  border: 1px solid var(--mlb-primary-color);
+  border-radius: 4px;
+  background-color: var(--mlb-accent-color);
+  color: var(--mlb-primary-color);
+  cursor: pointer;
+}
+
+/*If we are using radio buttons we can use these styles*/
+/* Radio Button Styles */
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Styling the label for radio buttons */
+label.radio-label {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/* Styling the checked state of radio buttons */
+input[type="radio"]:checked + label {
+  font-weight: bold;
+  color: var(--mlb-secondary-color);
+}
