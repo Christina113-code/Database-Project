@@ -46,11 +46,11 @@
             <option value="view_all">View All Items</option>
         </select>
 
-        <button type="submit" class="button" formaction="SearchSalesRecord.php">Go</button>
+        <button type="submit" class="button" formaction="RemoveSalesRecord.php">Go</button>
     </form>
 
     <h2>Images</h2>
-    <img src="image1.jpg" alt="Image 1" class="image">
+    <img src="team_logos.jpg" alt="Image 1" class="image">
     <img src="image2.jpg" alt="Image 2" class="image">
     <!-- Add more image tags as needed -->
 

@@ -26,7 +26,7 @@
                     empty($paymentType)
                    )
                    {
-                      echo ("Please Enter Search Criteria");
+                      echo ("Please Enter Delete Criteria");
                       exit();
                    }
 
@@ -52,13 +52,16 @@
                 }
 
 			//Create query
-			$sqlEmp="SELECT customerID, dateSold, item_id, paymentType, soldPrice FROM sales_record WHERE   $whereBlock ; " ;
+			$sqlEmp="DELETE FROM sales_record WHERE   $whereBlock ; " ;
 			//Execute query
-			#echo $sqlEmp;
-			#echo '<br>';
-			$result = $conn->query($sqlEmp) or die('Could not run query: '.$conn->error);
+			echo $sqlEmp;
+			echo '<br>';
+			$result = $conn->query($sqlEmp);  # or die('Could not run query: '.$conn->error);
 
-			if ($result->num_rows > 0)
+                        if ($result == false)
+                           echo "No Data Found for Deletion";
+                        else
+			if ($result !== false && $result->num_rows > 0)
 			{
 				// output data of each row
 				echo "<nav> Sales Records </nav>";

@@ -11,21 +11,22 @@
        <header>
            <h1>Baseball Card Database</h1>
        </header>
-               <nav>Search Sales Records</nav>
-	       <form method="get" action="FindSalesRecord.php">
+               <nav>Delete Sales Records</nav>
+	       <form method="get" action="DeleteSalesRecord.php">
                      <tr>
                      <br>
 		     <td>Customer Id:
-			  <input type="text" name="customeridField"  >
+			  <input type="text" name="customeridField" required >
 		     </td>
 		     <td>Date Sold:
-			  <input type="date" name="dateSold"  ID="date">
+			  <input type="date" name="dateSold"  ID="date" required>
 		     </td>
 		     <td>Item ID:
-			  <input type="text" name="itemID"  ID="nf">
+			  <input type="text" name="itemID"  ID="nf" required>
 		     </td>
         <label for="action">Payment Type:</label>
-        <select name="paymentType" id="action" class="select-style">
+        <select name="paymentType" id="action" class="select-style" required>
+            <option hidden selected>Select one...</option>
             <option value="CCard">Credit Card</option>
             <option value="Check">Check</option>
             <option value="Wire">Wire Transfer</option>
