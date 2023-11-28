@@ -1,0 +1,27 @@
+body { background-color: white;
+	/* background-size: cover; */
+     font-family: Arial, Verdana, sans-serif; }
+h1 { background-color: #22385C;   
+     color: #7B8BA5;
+     line-height: 200%;
+     font-family: Georgia, "Times New Roman", serif; }
+h2 { background-color: #7B8BA5;
+     color: #22385C; 
+     text-align: center;
+     font-family:  Georgia, "Times New Roman", serif; }
+p  {font-size: .90em; text-indent: 3em; }
+ul {font-weight: bold; }
+
+.redBox {
+	background-color:red;
+	border: dashed blue 2px;
+	font-size: 1.50em;
+	padding: 20px;
+}
+
+#wrapper{
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color: #7B8BA5;
+}

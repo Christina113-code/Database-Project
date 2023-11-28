@@ -15,9 +15,9 @@
 <nav>
     <a href="MainMenu.php">Home</a>
     <a href="#">Baseball Card</a>
-    <a href="#">Customer</a>
+    <a href="SelectCustomer.php">Customer</a>
     <a href="#">Player</a>
-    <a href="#">Sales Record</a>
+    <a href="SelectSalesRecord.php">Sales Record</a>
     <a href="#">Shipment</a>
     <a href="#">Supplier</a>
     <a href="#">Team</a>
@@ -46,12 +46,12 @@
             <option value="view_all">View All Items</option>
         </select>
 
-        <button type="submit" class="button" formaction="RemoveSalesRecord.php">Go</button>
-    </form>
 
-    <h2>Images</h2>
+    <button type="submit" class="button" formaction=MenuRedirect.php>Go</button>
+   
+    </form>
+    <br><br><br>
     <img src="team_logos.jpg" alt="Image 1" class="image">
-    <img src="image2.jpg" alt="Image 2" class="image">
     <!-- Add more image tags as needed -->
 
 </div>
