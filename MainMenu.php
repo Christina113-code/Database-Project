@@ -14,13 +14,13 @@
 
 <nav>
     <a href="MainMenu.php">Home</a>
-    <a href="#">Baseball Card</a>
+    <a href="View_Allbaseball_card.php">Baseball Card</a>
     <a href="View_AllCustomer.php">Customer</a>
-    <a href="#">Player</a>
+    <a href="View_AllPlayer.php">Player</a>
     <a href="View_AllSales_Record.php">Sales Record</a>
-    <a href="#">Shipment</a>
-    <a href="#">Supplier</a>
-    <a href="#">Team</a>
+    <a href="View_Allshipment.php">Shipment</a>
+    <a href="View_Allsupplier.php">Supplier</a>
+    <a href="View_Allteam.php">Team</a>
 </nav>
 
 <div class="container">
