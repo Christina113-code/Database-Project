@@ -15,9 +15,9 @@
 <nav>
     <a href="MainMenu.php">Home</a>
     <a href="#">Baseball Card</a>
-    <a href="SelectCustomer.php">Customer</a>
+    <a href="View_AllCustomer.php">Customer</a>
     <a href="#">Player</a>
-    <a href="SelectSalesRecord.php">Sales Record</a>
+    <a href="View_AllSales_Record.php">Sales Record</a>
     <a href="#">Shipment</a>
     <a href="#">Supplier</a>
     <a href="#">Team</a>

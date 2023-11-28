@@ -28,9 +28,15 @@
 		     <td>Item ID:
 			  <input type="text" name="itemID"  ID="nf" required>
 		     </td>
-
-		     <td>Payment Type:
-			  <input type="text" name="paymentType"  ID="nf" required>
+                     <td>
+		       <label for="action">Payment Type:</label>
+			 <select name="paymentType" id="action" class="select-style">
+			  <option value="CCard">Credit Card</option>
+			  <option value="Check">Check</option>
+			  <option value="Wire">Wire Transfer</option>
+			  <option value="Bitc">Bitcoin</option>
+			  <option value="Cash">Cash</option>
+			 </select>
 		     </td>
 
 		     <td>Sold Price:
