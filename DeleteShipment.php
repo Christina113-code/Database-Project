@@ -8,13 +8,12 @@
 	</head>
 	<body>
        <header>
-           <h1>Baseball Card Database</h1>
+           <h1>Baseball Card Database</h1>           
        </header>
-
+	   <nav>Delete Shipment Records</nav>
 		<?php
                  
 		include ("ConnectBaseBallCardDB.php");
-
                 $whereBlock="";
 
 		$shipment_id=$_GET["shipment_id"];
@@ -24,6 +23,7 @@
 		$supplier_id=$_GET["supplier_id"];
 		$transportation_type=$_GET["transportation_type"];
                 $date_shipped=$_GET["date_shipped"];
+		
 
 		if (empty($shipment_id)         &&
                     empty($pickup_location)     &&
@@ -34,7 +34,7 @@
                     empty($date_shipped)
                    )
                    {
-                      echo ("Please Enter minimum of one search criteria");
+                      echo ("Please Enter minimum of one delete criteria");
                       exit();
                    }
 
@@ -79,54 +79,31 @@
                    $whereBlock=  $whereBlock . ' date_shipped = '  . '\'' . $date_shipped . '\''; 
                 }
 
+
 			//Create query
-			$sqlEmp="SELECT shipment_id, pickup_location, destination, item_id, supplier_id, transportation_type, date_shipped FROM SHIPMENT WHERE   $whereBlock ; " ;
+			$sqlEmp="DELETE FROM SHIPMENT WHERE   $whereBlock ; " ;
 			//Execute query
 			#echo $sqlEmp;
 			#echo '<br>';
-			$result = $conn->query($sqlEmp) or die('Could not run query: '.$conn->error);
-
-
-
-			if ($result->num_rows > 0)
+			if ($conn->query($sqlEmp) == TRUE)  # or die('Could not run query: '.$conn->error);
 			{
 				// output data of each row
-				echo "<nav> Shipment Records </nav>";
-				echo "<table border='1'> ";
-				echo "<tr>
-						<th> Shipment Id </th>
-						<th> Pickup Location </th>
-						<th> Destination </th>
-						<th> Item Id </th>
-						<th> Supplier</th>
-						<th> Transportation Type </th>
-						<th> Date Shipped </th>
-
-			              </tr>";
-				while($row = $result->fetch_assoc())
-				{
-					echo "<tr>".
-							"<td>".$row["shipment_id"]."</td>".
-							"<td>".$row["pickup_location"]. "</td>".
-							"<td>".$row["destination"]."</td>".
-							"<td>".$row["item_id"]."</td>".
-							"<td>".$row["supplier_id"]."</td>".
-							"<td>".$row["transportation_type"]."</td>".							
-							"<td>".$row["date_shipped"]."</td>".															
-					     "</tr>";
-				}
-				echo "</table>";
+				echo '<br>';
+				echo $sqlEmp;
+				echo '<br>';
+				echo "Shipment Record Deleted";
 			}
 			else
 			{
-					echo "0 results";
+			        echo '<br>';
+				echo "Shipment Record Not Found for Deletion";
 			}
 			$conn->close();
 		?>
 	</body>
 	<form>
 	         <br><br>
-		 <button type="submit" formaction="Searchshipment.php">Return to Search</button>
+		 <button type="submit" formaction="RemoveShipment.php">Remove Shipment Record</button>
 		 <button type="submit" formaction="MainMenu.php">Main Page</button>
 	 
         </form>

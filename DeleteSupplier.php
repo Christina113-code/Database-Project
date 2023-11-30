@@ -8,13 +8,12 @@
 	</head>
 	<body>
        <header>
-           <h1>Baseball Card Database</h1>
+           <h1>Baseball Card Database</h1>           
        </header>
-
+	   <nav>Delete Supplier Records</nav>
 		<?php
                  
 		include ("ConnectBaseBallCardDB.php");
-
                 $whereBlock="";
 
 		$supplier_id=$_GET["supplier_id"];
@@ -24,6 +23,7 @@
 		$date_purchased=$_GET["date_purchased"];
 		$card_id=$_GET["card_id"];
                 $shipment_id=$_GET["shipment_id"];
+		
 
 		if (empty($supplier_id)            &&
                     empty($name)                   &&
@@ -79,54 +79,31 @@
                    $whereBlock=  $whereBlock . ' shipment_id = '  .  $shipment_id ; 
                 }
 
+
 			//Create query
-			$sqlEmp="SELECT supplier_id, name, address, card_purchased_price, date_purchased , card_id, shipment_id FROM SUPPLIER WHERE   $whereBlock ; " ;
+			$sqlEmp="DELETE FROM SUPPLIER WHERE   $whereBlock ; " ;
 			//Execute query
 			#echo $sqlEmp;
 			#echo '<br>';
-			$result = $conn->query($sqlEmp) or die('Could not run query: '.$conn->error);
-
-
-
-			if ($result->num_rows > 0)
+			if ($conn->query($sqlEmp) == TRUE)  # or die('Could not run query: '.$conn->error);
 			{
 				// output data of each row
-				echo "<nav> Supplier Records </nav>";
-				echo "<table border='1'> ";
-				echo "<tr>
-						<th> Supplier Id </th>
-						<th> Name </th>
-						<th> Address </th>
-						<th> Purchase Price </th>
-						<th> Date Purchased</th>
-						<th> Card ID </th>
-						<th> Shipment ID </th>
-
-			              </tr>";
-				while($row = $result->fetch_assoc())
-				{
-					echo "<tr>".
-							"<td>".$row["supplier_id"]."</td>".
-							"<td>".$row["name"]. "</td>".
-							"<td>".$row["address"]."</td>".
-							"<td>".$row["card_purchased_price"]."</td>".
-							"<td>".$row["date_purchased"]."</td>".
-							"<td>".$row["card_id"]."</td>".							
-							"<td>".$row["shipment_id"]."</td>".															
-					     "</tr>";
-				}
-				echo "</table>";
+				echo '<br>';
+				echo $sqlEmp;
+				echo '<br>';
+				echo "Supplier Record Deleted";
 			}
 			else
 			{
-					echo "0 results";
+			        echo '<br>';
+				echo "Supplier Record Not Found for Deletion";
 			}
 			$conn->close();
 		?>
 	</body>
 	<form>
 	         <br><br>
-		 <button type="submit" formaction="Searchsupplier.php">Return to Search</button>
+		 <button type="submit" formaction="RemoveSupplier.php">Remove Supplier Record</button>
 		 <button type="submit" formaction="MainMenu.php">Main Page</button>
 	 
         </form>

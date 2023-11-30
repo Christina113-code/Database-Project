@@ -27,7 +27,7 @@
 			echo "<tr>
 						<th> Team Id</th>
 						<th> Team Name</th>
-						<th> # Players</th>
+						<th> Players</th>
 						<th> Manager</th>
 						<th> League</th>
 						<th> World Series Wins</th>

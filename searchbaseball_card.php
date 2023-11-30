@@ -13,6 +13,7 @@
        </header>
                <nav>Search Baseball Card Records</nav>
 	       <form method="get" action="FindBaseballcard.php">
+	       	   <table style="width:100%;">
                      <tr>
                      <br>
 		     <td>Card Id:
@@ -35,6 +36,8 @@
 		     </td>
 			  
                      </tr>
+	       	     </table>
+                     
                      <br><br><br>
                      
 		      <input type="submit" name="submit">

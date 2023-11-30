@@ -75,7 +75,6 @@
 	<form>
 	         <br><br>
 		 <button type="submit" formaction="RemoveSalesRecord.php">Remove another record</button>
-	       <!-- <button type="submit" formaction="SelectSalesRecord.php">Insert New Sales Records</button> -->
 		 <button type="submit" formaction="MainMenu.php">Main Page</button>
 	 
         </form>

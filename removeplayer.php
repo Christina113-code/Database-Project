@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baseball Card Database</title>
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-       <body>
+	<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Baseball Card Database</title>
+            <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
        <header>
-           <h1>Search Players</h1>
+           <h1>Baseball Card Database</h1>           
        </header>
-               <nav>Search Players</nav>
-	       <form method="get" action="FindPlayer.php">
+	   <nav>Delete Player Records</nav>
+	       <form method="get" action="DeletePlayer.php">
 	       	     <table style="width:100%;">
 
                      <tr style="width:100%;">
@@ -38,13 +37,10 @@
 			  
                      </tr>
                      </table>
-                     
-                     <br><br><br>
-                     
+                                          
 		      <input type="submit" name="submit">
 		      <button type="reset">Reset Search Fields</button>
 		      <button type="submit" formaction="MainMenu.php">Main Page</button>
-		      
                </form>
        </body>
 </html>

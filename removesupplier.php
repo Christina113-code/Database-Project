@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baseball Card Database</title>
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-       <body>
+	<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Baseball Card Database</title>
+            <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
        <header>
-           <h1>Baseball Card Database</h1>
+           <h1>Baseball Card Database</h1>           
        </header>
-       
-                  <nav>Search Suppliers</nav>
-
-	       <form method="get" action="FindSupplier.php">
+	   <nav>Delete Supplier Records</nav>
+	       <form method="get" action="DeleteSupplier.php">
 	       	     <table style="width:100%;">
 
                      <tr style="width:100%;">
@@ -40,16 +37,13 @@
 		     <td>Shipment ID
 			  <input type="text" name="shipment_id"  >
 		     </td>
-			  
                      </tr>
                      </table>
-                     
-                     <br><br><br>
-                     
+	             <br><br><br>  
+
 		      <input type="submit" name="submit">
 		      <button type="reset">Reset Search Fields</button>
 		      <button type="submit" formaction="MainMenu.php">Main Page</button>
-		      
                </form>
        </body>
 </html>

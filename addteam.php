@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baseball Card Database</title>
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-       <body>
-       <header>
+	<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Baseball Card Database</title>
+            <link rel="stylesheet" href="styles.css">
+	</head>
+        <header>
            <h1>Baseball Card Database</h1>
-       </header>
-       
-                  <nav>Search Teams</nav>
-
-	       <form method="get" action="Findteam.php">
-	       	     <table style="width:100%;">
-
+        </header>
+               <nav>Add Team</nav>
+	<body>
+		 
+		   <form method="get" action="InsertTeam.php">
+		   <table style="width:100%;">
                      <tr style="width:100%;">
                      <br>
 		     <td>Team Id
@@ -36,16 +33,13 @@
 		     </td>
 		     <td>World Series Wins
 			  <input type="text" name="world_series"  >
-			  
                      </tr>
-                     </table>
-                     
+                   </table>
                      <br><br><br>
-                     
-		      <input type="submit" name="submit">
-		      <button type="reset">Reset Search Fields</button>
+		      <input type="submit">
+		      <button type="submit" formaction="SearchTeam.php">Search Teams</button>
 		      <button type="submit" formaction="MainMenu.php">Main Page</button>
-		      
-               </form>
-       </body>
+		      </form>
+
+	</body>
 </html>

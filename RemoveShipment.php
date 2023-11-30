@@ -11,30 +11,32 @@
        <header>
            <h1>Baseball Card Database</h1>
        </header>
-               <nav>Delete Baseball Card Records</nav>
-	       <form method="get" action="DeleteBaseballcard.php">
+               <nav>Delete Shipment Records</nav>
+	       <form method="get" action="DeleteShipment.php">
 	       	  <table style="width:100%;">
 			     <tr>
 			     <br>
-			     <td>Card Id:
-				  <input type="text" name="cardID"  >
+			     <td>Shipment Id
+				  <input type="text" name="shipment_id"  >
 			     </td>
-			     <td>Serial Number:
-				  <input type="text" name="serialNumber"  >
+			     <td>Pickup Location
+				  <input type="text" name="pickup_location"  >
 			     </td>
-			     <td>Current Value:
-				  <input type="text" name="currentValue"  >
+			     <td>Destination
+				  <input type="text" name="destination"  >
 			     </td>
-			     <td>Manufactured Date:
-				  <input type="date" name="mfrdDate"  >
+			     <td>Item Id
+				  <input type="text" name="item_id"  >
 			     </td>
-			     <td>Grade:
-				  <input type="text" name="grade"  >
+			     <td>Supplier
+				  <input type="text" name="supplier_id"  >
 			     </td>
-			     <td>Supplier Id:
-				  <input type="text" name="supplierID"  >
-			     </td>                     		  
-			     </tr>
+			     <td>Transportation Type
+				  <input type="text" name="transportation_type"  >
+			     </td>
+			     <td>Date Shipped
+				  <input type="date" name="date_shipped"  >
+			     </td>
                   </table>
                      <br><br><br>
                      
